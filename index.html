@@ -117,7 +117,7 @@
         <div class="repo" id="rpodiv" style="display: none;">
           <div>
           <label for="reponame">Repository name you want to create:</label>
-          <input type="text" id="reponame" name="reponame" onfocus="clearThis(this)" />
+          <input type="text" id="reponame" name="reponame" onfocus="this.value=''" />
         </div>
         <div>
           <label for="description">Repository Description:</label>
@@ -137,9 +137,9 @@
         <div class="projects" id="projects">
           <section class="left-section flex">
             <button id="all">All Projects</button>
-            <button id="CSS">CSS</button>
+            <button id="css">CSS</button>
             <button id="html">HTML</button>
-            <button id="JavaScript">Java Script</button>
+            <button id="javascript">Java Script</button>
             <button id="C#">C#</button>
           </section>
           <section id="cardselection" class="right-section flex"></section>
@@ -242,8 +242,6 @@
       <p>@Naila Alissa .2023</p>
     </footer>
     <script src="script.js"></script>
-    <script> function clearThis(target) {
-      target.value= "";
-  }</script>
+    
   </body>
 </html>
