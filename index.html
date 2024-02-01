@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="img/nailaphoto.png" type="icon" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Eng.Naila Alissa</title>
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <header class="flex">
+        <div>
+          <img class="logo" src="img/logoblack.jpg" />
+        </div>
+
+        <ul class="menu" id="Home">
+          <li>
+            <a class="menuItem" href="#projects">My Projects</a>
+          </li>
+          <li>
+            <a class="menuItem" href="https://nailaalissa.github.io/Naila-AlissaCV/">Profile</a>
+          </li>
+          <li><a class="menuItem" href="#about">About</a></li>
+          <li><a class="menuItem" href="#contact">Contact Me</a></li>
+        </ul>
+        <button class="btn" id="loginBtn">Login</button>
+        <button class="hamburger">
+          <i class="menuIcon material-icons">menu</i>
+          <i class="closeIcon material-icons">close</i>
+        </button>
+      </header>
+    </div>
+
+    <div class="bodyhero">
+      <div class="formbody">
+        <div class="loginForm" id="loginForm">
+          <form class="login flex">
+            <div class="flex">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="flex">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <button id="adminbtn" class="btn" type="button" onclick="login()">
+              Login To Admin Panel
+            </button>
+          </form>
+        </div>
+      </div>
+      <section class="hero flex" id="about">
+        <div class="left-section">
+          <div class="parent-avatar flex">
+            <img src="img/nailaphoto.png" class="avatar profile-pic" id="profileimg" alt="" />
+          </div>
+          <h1 class="title">Eng.Naila Alissa</h1>
+          <p id="ProfileText" class="subtitle">
+            I'm a Frontend Web Developer, specializing in crafting visually appealing and
+            user-friendly websites. A Computer Engineering graduate from Damascus University, I
+            bring strong problem-solving skills and the ability to adapt quickly. Passionate about
+            sharing knowledge, I regularly post valuable content on Web Development on my LinkedIn.
+            Open to job opportunities, I am a communicative, innovative team player eager to
+            contribute and grow. Let's connect and explore how I can bring my skills to your team
+          </p>
+
+          <div class="allicons flex">
+            <a href="https://github.com/nailaalissa" class="icon"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+
+            <a href="https://www.linkedin.com/in/naila-alissa/" class="icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/naila-alissa/" class="icon">
+              <i class="fa-brands fa-square-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="right-section animation">
+          <script
+            src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"
+          ></script>
+
+          <dotlottie-player
+            src="https://lottie.host/6c6a87a4-d318-482f-a2da-ed1075fce989/YE0rStW9Vw.json"
+            background="transparent"
+            speed="1"
+            style="width: 400px; height: 300px"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </div>
+      </section>
+    </div>
+    <div class="divider"></div>
+
+    <main>
+      <div>
+        <h1 class="title">My Projects</h1>
+        <div>
+          <div class="repoContainer">
+          <button id="createnew" class="createnew btn">Create new Repo</button></div>
+        <div class="repo" id="rpodiv" style="display: none;">
+          <div>
+          <label for="reponame">Repository name you want to create:</label>
+          <input type="text" id="reponame" name="reponame" onfocus="clearThis(this)" />
+        </div>
+        <div>
+          <label for="description">Repository Description:</label>
+          <input type="textarea" id="description" name="description" onfocus="this.value=''" />
+        </div>
+        <div class="flex">
+          <label for="visibility">Visibility:</label>
+          <select id="visibility" name="visibility" class="option">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+          </select>
+        </div>
+          <button id="createRepo" class="createRepo btn">Create </button>
+        </div>
+      </div>
+    </div>
+        <div class="projects" id="projects">
+          <section class="left-section flex">
+            <button id="all">All Projects</button>
+            <button id="CSS">CSS</button>
+            <button id="html">HTML</button>
+            <button id="JavaScript">Java Script</button>
+            <button id="C#">C#</button>
+          </section>
+          <section id="cardselection" class="right-section flex"></section>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <section id="contact">
+        <section class="contact-us">
+          <h1 class="title">
+            <span class="icon-email"></span>
+            Contact Me
+          </h1>
+          <p class="subtitle">
+            Contact me for more information and get notified when I publish something new.
+          </p>
+          <div class="flex">
+            <form id="my-form" action="https://formspree.io/f/xzbndqyq" method="post">
+              <div>
+                <label for="email">Email Address:</label>
+                <input name="email" id="email" type="email" required />
+                <div id="email-error" class="validation-error"></div>
+              </div>
+              <div>
+                <label for="message">Your message:</label>
+                <textarea name="message" id="message" required></textarea>
+                <div id="message-error" class="validation-error"></div>
+              </div>
+              <button id="my-form-button" type="submit" class="btn">Submit</button>
+              <div id="my-form-status" class="subtitle"></div>
+            </form>
+
+            <div class="animation">
+              <script
+                src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                type="module"
+              ></script>
+
+              <dotlottie-player
+                src="https://lottie.host/cf4309be-1b4d-4d03-b682-c69e72c270b0/Rygin4aMex.json"
+                background="transparent"
+                speed="1"
+                style="width: 400px; height: 400px"
+                loop
+                autoplay
+              ></dotlottie-player>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="panel">
+      <h2>Admin</h2>
+      <p id="lastLoginInfo"></p>
+    
+      <div class="flex">
+    <label for="backgroundColor">Background Color:</label>
+      <input type="color" id="backgroundColor" name="backgroundColor" value="#000" />
+    </div>
+    <div class="flex">
+      <label for="textColor">Text Color:</label>
+      <input type="color" id="textColor" name="textColor" value="#000000" />
+    </div>
+    <div class="flex">
+      <label for="navColor">Nav Menu Color:</label>
+      <input type="color" id="navColor" name="navColor" value="#293040" />
+    </div>
+    <div class="flex">
+      <label for="profileText">About me Text:</label>
+      <input type="text" id="text" name="profileText" /> 
+    </div>
+  
+      <button id="applyChanges" class="upload-button btn">Apply </button> 
+      <button id="resetStylesBtn" class="btn">Reset</button> 
+    </div>
+
+    <!-- Profile Image -->
+    <!-- <label for="profileImageUpload">Choose a profile image:</label>
+       
+      <input class="file-upload" type="file" id="profileImageUpload" accept="image/*" /> -->
+    <!-- <img id="profileImage" class="avatar" alt="Profile Image" /> -->
+    <!-- 
+      <button id="resetStylesBtn" class="btn">Reset</button> -->
+  
+
+    <footer class="flex">
+      <ul class="flex">
+        <li>
+          <a href="https://nailaalissa.github.io/Naila-AlissaCV/">About me</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#about">About Me</a>
+        </li>
+      </ul>
+      <p>@Naila Alissa .2023</p>
+    </footer>
+    <script src="script.js"></script>
+    <script> function clearThis(target) {
+      target.value= "";
+  }</script>
+  </body>
+</html>
